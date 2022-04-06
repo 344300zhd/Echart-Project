@@ -1,6 +1,6 @@
 function init() {
-    const echart_elem = document.getElementById("echart-box");
-    const echart_instance = echarts.init(echart_elem,'dark');
+    const element = document.getElementById("echart-box");
+    const instance = echarts.init(element,'dark');
     let option = {
         // 全局配置
         title: {
@@ -32,8 +32,19 @@ function init() {
             }
         ]
     }
-    echart_instance && echart_instance.setOption(option);
+    instance && instance.setOption(option);
+    // 自适应
     window.onresize = function(){
-        echart_instance.resize()
+        instance.resize()
     }
+    // 图形元素点击事件
+    instance.on("click",function(params){
+        // window.open("https://www.baidu.com/s?word=" + params.name)
+    })
+    // 空白区域点击事件
+    instance.getZr().on("click",function(event){
+        if(!event.target){
+            alert("点击空白区域")
+        }
+    })
 }
