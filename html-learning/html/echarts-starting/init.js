@@ -1,6 +1,8 @@
 function init() {
     const element = document.getElementById("echart-box");
-    const instance = echarts.init(element,'dark');
+    const instance = echarts.init(element,'dark',{
+        locale: "EN"
+    });
     let option = {
         // 全局配置
         title: {
@@ -47,4 +49,6 @@ function init() {
             alert("点击空白区域")
         }
     })
+    const instanceByDom = echarts.getInstanceByDom(element)
+    console.log("instanceByDom =>",instanceByDom);
 }
