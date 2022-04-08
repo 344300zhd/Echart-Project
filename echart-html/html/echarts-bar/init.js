@@ -11,7 +11,10 @@ function init(){
         },
         legend: {},
         xAxis: {
-            data: ["时间","生命","成就","虚度","懊悔","开心"]
+            data: ["时间","生命","成就","虚度","懊悔","开心"],
+            axisLine: {
+                show: false
+            }
         },
         yAxis: {
             name: "进度",
