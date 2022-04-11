@@ -5,9 +5,13 @@ function init(){
         tooltip: {},
         legend: {},
         xAxis: {
-            data: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
+            data: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
         },
-        yAxis: {},
+        yAxis: {
+            axisLabel: {
+                margin: 
+            }
+        },
         series: [
             {
                 type: "scatter",
