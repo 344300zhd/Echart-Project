@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>echart-自定义柱状图</title>
+    <title>电池图-柱形图</title>
     <style>
         html,body{
             width: 100vw;
             height: 100vh;
-            background: #eee;
+            margin: 0;
         }
-        #echart-box{
-            width: 30%;
-            height: 100%;
-            background: #fff;
+        #bar-box{
+            width: 50%;
+            height: 50%;
+            background: #eee;
         }
     </style>
 </head>
 <body>
-    <div id="echart-box"></div>
+    <div id="bar-box"></div>
 
     <script src="../../utils/echarts.js"></script>
     <script src="init.js"></script>
     <script>
         window.onload = function(){
-            init()
+            init();
         }
     </script>
 </body>
